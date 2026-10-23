@@ -1,5 +1,13 @@
 # Rede limpa — versão 1.1.0
 
+## Versão para terminal
+
+Execute um comando e responda ao menu para escolher Chrome/Chromium ou Firefox, configurar bloqueios e acompanhar requisições e erros ao vivo, com cores por método. O modo terminal funciona por proxy local e dispensa a extensão. Veja [requisitos e exemplos do terminal](terminal/README.md).
+
+```bash
+node terminal/rede-limpa.cjs
+```
+
 A extensão acrescenta a aba **Rede limpa** ao DevTools do Firefox, Chrome e Edge. Nessa aba, as chamadas para `ff.kes.v2.scr.kaspersky-labs.com` ficam ocultas automaticamente, tanto as bem-sucedidas quanto as bloqueadas. O critério é o host exato, para qualquer caminho, método, status e porta, sem depender de IDs ou query parameters.
 
 As linhas usam as cores do método: **GET verde, POST amarelo, PUT azul e DELETE vermelho**. PATCH é roxo; demais métodos são cinza. Os nomes dos métodos continuam escritos para que a identificação não dependa somente da cor. Erros da aplicação continuam visíveis, com o status destacado.
