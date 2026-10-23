@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rede limpa</title>
+  <link rel="stylesheet" href="panel.css">
+  <script defer src="network-core.js"></script>
+  <script defer src="panel.js"></script>
+</head>
+<body>
+  <header>
+    <div class="title"><strong>Rede limpa</strong><span class="tag">Kaspersky oculto</span></div>
+    <div class="toolbar">
+      <button id="clear" type="button">Limpar</button>
+      <button id="pause" type="button" aria-pressed="false">Pausar</button>
+      <input id="search" type="search" placeholder="Filtrar URL, método ou status" aria-label="Filtrar requisições">
+      <select id="method" aria-label="Método HTTP">
+        <option value="">Todos os métodos</option><option>GET</option><option>POST</option>
+        <option>PUT</option><option>DELETE</option><option>PATCH</option><option>OPTIONS</option><option>HEAD</option>
+      </select>
+      <label><input id="preserve" type="checkbox">Preservar ao navegar</label>
+    </div>
+    <div class="legend" aria-label="Cores por método"><span class="badge get">GET</span><span class="badge post">POST</span><span class="badge put">PUT</span><span class="badge delete">DELETE</span><span class="badge patch">PATCH</span></div>
+  </header>
+  <main id="workspace">
+    <section class="requests" aria-label="Requisições">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Método</th><th>Status</th><th>Requisição / domínio</th><th>Tipo</th><th>Tempo</th></tr></thead>
+          <tbody id="requests"></tbody>
+        </table>
+        <div id="empty" class="empty"><strong>Aguardando requisições</strong><p>Recarregue a aplicação com esta aba aberta.</p><p>No Firefox, abra a aba Rede nativa uma vez nesta sessão do DevTools para ativar a captura e volte aqui.</p></div>
+      </div>
+    </section>
+    <aside id="inspector" hidden aria-label="Detalhes da requisição">
+      <div class="detail-title"><strong>Detalhes</strong><button id="close" type="button" aria-label="Fechar detalhes">Fechar</button></div>
+      <div id="details"></div>
+    </aside>
+  </main>
+  <footer><span id="counter" role="status">Iniciando captura…</span><span>Somente concluídas · últimas 500 · dados em memória</span></footer>
+  <p id="notice" class="notice">As cores e a ocultação valem nesta aba. A aba Rede nativa continua igual.</p>
+</body>
+</html>

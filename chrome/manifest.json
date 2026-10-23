@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Rede limpa",
+  "version": "1.1.0",
+  "description": "Painel DevTools com Kaspersky oculto e cores por método HTTP. Mantém bloqueio GET XHR/fetch do host configurado.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "devtools_page": "devtools.html",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "kaspersky_polling",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "minimum_chrome_version": "101"
+}

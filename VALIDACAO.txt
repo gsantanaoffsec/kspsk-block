@@ -1,0 +1,14 @@
+Verificações locais realizadas em 23/10/2026:
+- JSON dos dois manifests e das duas regras lido com sucesso.
+- Referências de arquivos, regra habilitada e permissão única conferidas.
+- 17 cenários de correspondência por pacote: 34 verificações aprovadas, incluindo a URL /init relatada.
+- Regex exercitada com Python; isso não substitui validação RE2/DNR no navegador.
+- 15 testes Node aprovados: ocultação por host, preservação de erros da API, métodos, limite, pausa, navegação, tabela e Response.
+- APIs Firefox/Chrome e DOM simulados nesses testes; não são testes de instalação real.
+- Sintaxe JavaScript dos dois pacotes conferida com node --check.
+- Assets compartilhados dos dois navegadores comparados byte a byte.
+- Testes reproduzíveis com Node 18+ em tests/panel.test.cjs: node --test tests/panel.test.cjs
+- Pacotes ZIP conferidos após geração.
+
+Não realizado: web-ext lint, instalação real, teste de tráfego, reinício, assinatura, publicação, homologação corporativa ou avaliação do impacto no Kaspersky.
+A aba Rede nativa não muda; ocultação e cores são aplicadas na nova aba Rede limpa.
